@@ -12,7 +12,8 @@
             color: #f1f5f9;
             margin: 0;
             display: flex;
-            height: 100vh;
+            flex-direction: row;
+            min-height: 100vh;
             transition: background-color 0.4s, color 0.4s;
         }
         aside {
@@ -44,6 +45,10 @@
         header h1 img {
             height: 40px;
             margin-right: 10px;
+        }
+        header p {
+            font-size: 1.1em;
+            margin-top: 5px;
         }
         @keyframes slideIn {
             from { transform: translateX(-100%); opacity: 0; }
@@ -115,23 +120,41 @@
         .dark-mode aside, .dark-mode footer, .dark-mode .content-section {
             background-color: #e2e8f0;
         }
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+            aside {
+                width: 100%;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-around;
+            }
+            .block, .links {
+                width: 45%;
+                margin: 10px 0;
+            }
+            main {
+                padding: 10px;
+            }
+        }
     </style>
 </head>
 <body>
     <button class="toggle-btn" onclick="toggleMode()"><i class="fas fa-adjust"></i></button>
 
     <aside>
-        <h2>Skills</h2>
         <div class="block">
+            <h2>Skills</h2>
             <h4>Technical</h4>
             <ul class="skills-list">
                 <li>Python</li>
                 <li>SQL</li>
                 <li>C Programming</li>
+                <li>Adobe Illustrator</li>
                 <li>Linux Command Line</li>
                 <li>Google Cloud Platform</li>
                 <li>Power BI</li>
-                <li>Adobe Illustrator</li>
             </ul>
             <h4>Soft</h4>
             <ul class="skills-list">
@@ -142,13 +165,12 @@
             </ul>
         </div>
 
-        <h2>Contact</h2>
         <div class="links">
+            <h2>Contact</h2>
             <a href="mailto:yashaskeshav87@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
             <a href="https://www.linkedin.com/in/yashas-keshava" target="_blank"><i class="fab fa-linkedin"></i></a>
             <a href="https://github.com/Yashyosss" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.instagram.com/_yashyosss_" target="_blank"><i class="fab fa-instagram"></i></a>
-
+            <a href="https://www.instagram.com/yourusername" target="_blank"><i class="fab fa-instagram"></i></a>
         </div>
     </aside>
 
@@ -177,7 +199,6 @@
                 <li>Foundation of Ethical Hacking by Udacity – Jan 2025</li>
                 <li>Google Cybersecurity by Coursera – March 2024</li>
                 <li>Cisco Introduction to Cybersecurity – June 2024</li>
-            </ul>
         </section>
 
         <section class="content-section">
