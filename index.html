@@ -393,7 +393,7 @@
         <div>
           <div class="proj-num">— Project 01</div>
           <div class="proj-name">PixelPhantom</div>
-          <div class="proj-tagline">v2.0.0 &nbsp;·&nbsp; 90/90 tests passing &nbsp;·&nbsp; MIT License</div>
+          <div class="proj-tagline">v2.0.0 &nbsp;·&nbsp; 90/90 tests passing &nbsp;·&nbsp; </div>
           <p class="proj-desc">
             A desktop application for detecting and removing <strong>duplicate image, video, and audio files</strong> using a novel pixel-direct comparison approach — no hashing at any stage. Two files are only flagged as duplicates if their actual decoded pixel data is identical, making it immune to re-encoding artifacts that fool MD5/SHA-based tools.<br><br>
             Built with a <strong>three-phase scan pipeline</strong>: a size gate eliminates ~90% of files instantly, a dimension gate handles another layer, and only remaining files undergo full pixel comparison via Pillow's <code>tobytes()</code>. All scanning runs in background daemon threads — the UI never blocks. Files go to a recycle bin by default, never permanently deleted without confirmation.
